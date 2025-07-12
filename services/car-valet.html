@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional car valet and detailing services in New Zealand. Interior and exterior car cleaning and protection. Book with Sweepo today!">
+    <title>Car Valet Services | Sweepo - We sweep, you relax</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <h1>Sweepo</h1>
+                <p class="slogan">We sweep, you relax</p>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link active">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="home-cleaning.html">Home Cleaning</a></li>
+                            <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
+                            <li><a href="pest-control.html">Pest Control</a></li>
+                            <li><a href="garbage-removal.html">Garbage Removal</a></li>
+                            <li><a href="lawn-garden.html">Lawn & Garden</a></li>
+                            <li><a href="car-valet.html">Car Valet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../company.html" class="nav-link">Company Details</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+64-21-123-4567" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    <span class="btn-text">Call Now</span>
+                </a>
+                <button class="btn btn-quote" onclick="openQuoteModal()">
+                    <i class="fas fa-calculator"></i>
+                    <span class="btn-text">Get a Quote</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Service Hero -->
+<section class="service-hero">
+    <div class="container">
+        <div class="service-hero-content">
+            <h1>Professional Car Valet & Detailing Services</h1>
+            <p>Keep your vehicle looking its absolute best with our comprehensive car valet and detailing services. From basic washes to premium protection packages, we restore and maintain your car's appearance inside and out.</p>
+
+            <div class="service-hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-car"></i>
+                    <span>All Vehicle Types</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Paint Protection</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tools"></i>
+                    <span>Professional Products</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-home"></i>
+                    <span>Mobile Service Available</span>
+                </div>
+            </div>
+
+            <div class="service-hero-actions">
+                <button class="btn btn-primary btn-large" onclick="openQuoteModal()">
+                    Book Car Valet
+                </button>
+                <a href="tel:+64-21-123-4567" class="btn btn-outline btn-large">
+                    <i class="fas fa-phone"></i> Call +64 21 123 4567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Details -->
+<section class="service-details">
+    <div class="container">
+        <div class="service-content-grid">
+            <div class="service-info">
+                <h2>Complete Vehicle Care Solutions</h2>
+                <p>Our professional car valet services provide everything from basic cleaning to comprehensive detailing packages. Using premium products and techniques, we protect your investment and keep your vehicle looking showroom fresh.</p>
+
+                <div class="service-types">
+                    <div class="service-type-card">
+                        <div class="service-type-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Exterior Services</h3>
+                        <p>Complete exterior cleaning and protection to keep your car's paintwork pristine.</p>
+                        <ul>
+                            <li>Hand wash and dry</li>
+                            <li>Paint decontamination</li>
+                            <li>Clay bar treatment</li>
+                            <li>Wheel and tire cleaning</li>
+                            <li>Window and mirror cleaning</li>
+                            <li>Trim and plastic restoration</li>
+                            <li>Headlight restoration</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-type-card">
+                        <div class="service-type-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h3>Interior Services</h3>
+                        <p>Deep cleaning and conditioning for all interior surfaces and upholstery.</p>
+                        <ul>
+                            <li>Vacuum and deep clean</li>
+                            <li>Leather conditioning</li>
+                            <li>Fabric protection</li>
+                            <li>Dashboard and console care</li>
+                            <li>Steam cleaning</li>
+                            <li>Odor elimination</li>
+                            <li>Floor mat cleaning</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-type-card">
+                        <div class="service-type-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Premium Detailing</h3>
+                        <p>Advanced detailing services for maximum protection and show-quality results.</p>
+                        <ul>
+                            <li>Paint correction and polishing</li>
+                            <li>Ceramic coating application</li>
+                            <li>Paint protection film</li>
+                            <li>Engine bay detailing</li>
+                            <li>Chrome and metal polishing</li>
+                            <li>Swirl mark removal</li>
+                            <li>Show car preparation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-type-card">
+                        <div class="service-type-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Valet</h3>
+                        <p>Convenient mobile service bringing professional car care directly to your location.</p>
+                        <ul>
+                            <li>On-site service at home or office</li>
+                            <li>Flexible scheduling</li>
+                            <li>Water-efficient cleaning</li>
+                            <li>Professional mobile equipment</li>
+                            <li>Multiple vehicle discounts</li>
+                            <li>Fleet service programs</li>
+                            <li>Regular maintenance schedules</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-sidebar">
+                <div class="pricing-card">
+                    <h3>Service Packages</h3>
+                    <div class="price-item">
+                        <span>Basic Wash & Vacuum</span>
+                        <strong>From $35</strong>
+                    </div>
+                    <div class="price-item">
+                        <span>Standard Valet</span>
+                        <strong>From $65</strong>
+                    </div>
+                    <div class="price-item">
+                        <span>Premium Detail</span>
+                        <strong>From $120</strong>
+                    </div>
+                    <div class="price-item">
+                        <span>Full Protection Package</span>
+                        <strong>From $200</strong>
+                    </div>
+                    <div class="price-item">
+                        <span>Mobile Service</span>
+                        <strong>+$15 travel fee</strong>
+                    </div>
+                    <p class="price-note">*Prices vary based on vehicle size, condition, and selected services. Package deals available.</p>
+                    <button class="btn btn-primary" onclick="openQuoteModal()">
+                        Get Custom Quote
+                    </button>
+                </div>
+
+                <div class="service-areas">
+                    <h3>Vehicle Types</h3>
+                    <ul>
+                        <li>Cars & Sedans</li>
+                        <li>SUVs & 4WDs</li>
+                        <li>Hatchbacks</li>
+                        <li>Utes & Trucks</li>
+                        <li>Vans & People Movers</li>
+                        <li>Motorcycles</li>
+                        <li>Boats & Marine</li>
+                        <li>RVs & Caravans</li>
+                        <li>Classic & Luxury Cars</li>
+                        <li>Fleet Vehicles</li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">Add-On Services</h3>
+                    <ul>
+                        <li>Engine bay cleaning</li>
+                        <li>Undercarriage wash</li>
+                        <li>Pet hair removal</li>
+                        <li>Stain removal</li>
+                        <li>Bug and tar removal</li>
+                        <li>Scratch repair</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Professional 4-Step Process</h2>
+            <p>Meticulous attention to detail for exceptional results</p>
+        </div>
+
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Vehicle Inspection</h3>
+                    <p>Thorough assessment of your vehicle's condition, noting specific areas of concern and tailoring our approach accordingly.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Pre-Treatment</h3>
+                    <p>Apply specialized pre-treatments for stubborn dirt, stains, and contaminants to ensure optimal cleaning results.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Deep Clean & Detail</h3>
+                    <p>Comprehensive cleaning using professional techniques and premium products for both interior and exterior surfaces.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Protection & Finish</h3>
+                    <p>Apply protective coatings and finishes to preserve the clean look and protect your investment for longer-lasting results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about our car valet services</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How long does a car valet service take?</h3>
+                <p>Service times vary by package: Basic wash takes 30-45 minutes, Standard valet 1-2 hours, Premium detail 3-4 hours, and Full protection packages can take 4-6 hours depending on vehicle condition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer mobile car valet services?</h3>
+                <p>Yes! Our mobile service brings professional car care to your home, office, or preferred location. We have water-efficient systems and all necessary equipment for on-site service.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What's the difference between a basic wash and premium detailing?</h3>
+                <p>Basic wash includes exterior cleaning and interior vacuum. Premium detailing involves paint correction, protection application, deep interior cleaning, and conditioning - essentially restoring your car to near-new condition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How often should I have my car professionally detailed?</h3>
+                <p>For optimal protection and appearance, we recommend basic cleaning monthly, standard valet every 2-3 months, and premium detailing 2-3 times per year, depending on usage and conditions.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you work on all types of vehicles?</h3>
+                <p>Yes, we service all vehicle types including cars, SUVs, trucks, motorcycles, boats, and RVs. We have specialized techniques and products for different vehicle types and finishes.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What products do you use for car detailing?</h3>
+                <p>We use only premium automotive-grade products from trusted brands. All products are safe for your vehicle's surfaces and environmentally responsible. We can discuss specific product preferences upon request.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Make Your Car Shine?</h2>
+            <p>Book professional car valet service and protect your investment</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-large" onclick="openQuoteModal()">
+                    Book Car Valet Now
+                </button>
+                <a href="tel:+64-21-123-4567" class="btn btn-outline btn-large">
+                    <i class="fas fa-phone"></i> Call +64 21 123 4567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>Sweepo</h3>
+                    <p class="footer-slogan">We sweep, you relax</p>
+                </div>
+                <p>Professional cleaning services available 24/7 across New Zealand. Trusted by thousands of satisfied customers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="home-cleaning.html">Home Cleaning</a></li>
+                    <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
+                    <li><a href="pest-control.html">Pest Control</a></li>
+                    <li><a href="garbage-removal.html">Garbage Removal</a></li>
+                    <li><a href="lawn-garden.html">Lawn & Garden</a></li>
+                    <li><a href="car-valet.html">Car Valet</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../company.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="#" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +64 21 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sweepo.co.nz</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Auckland, New Zealand</p>
+                    <p><i class="fas fa-clock"></i> 24/7 Service Available</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sweepo. All rights reserved. | Website: sweepo.co.nz</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Book Your Car Valet Service</h3>
+            <span class="close" onclick="closeQuoteModal()">&times;</span>
+        </div>
+        <form id="quoteForm" class="quote-form">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Package *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select service package</option>
+                    <option value="basic-wash">Basic Wash & Vacuum</option>
+                    <option value="standard-valet">Standard Valet</option>
+                    <option value="premium-detail">Premium Detail</option>
+                    <option value="full-protection">Full Protection Package</option>
+                    <option value="mobile-service">Mobile Service</option>
+                    <option value="custom-package">Custom Package</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type *</label>
+                <select id="vehicleType" name="vehicleType" required>
+                    <option value="">Select vehicle type</option>
+                    <option value="small-car">Small Car/Hatchback</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV/4WD</option>
+                    <option value="ute-truck">Ute/Truck</option>
+                    <option value="van">Van/People Mover</option>
+                    <option value="luxury-car">Luxury/Premium Car</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="boat">Boat/Marine</option>
+                    <option value="rv">RV/Caravan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleDetails">Vehicle Details</label>
+                <input type="text" id="vehicleDetails" name="vehicleDetails" placeholder="Make, Model, Year, Color">
+            </div>
+
+            <div class="form-group">
+                <label for="serviceLocation">Preferred Location</label>
+                <select id="serviceLocation" name="serviceLocation">
+                    <option value="">Select location</option>
+                    <option value="your-facility">At Your Facility</option>
+                    <option value="mobile-home">Mobile - At Home</option>
+                    <option value="mobile-office">Mobile - At Office</option>
+                    <option value="mobile-other">Mobile - Other Location</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Service Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Special Requirements</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please describe vehicle condition, specific concerns, preferred timing, or any special requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+                Book Car Valet Service
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="../assets/js/script.js"></script>
+
+<style>
+    /* Car valet specific styles - inherit from main stylesheet */
+    .service-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 140px 0 80px;
+        position: relative;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: #666;
+    }
+
+    .breadcrumb a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .breadcrumb i {
+        margin: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .service-hero-features {
+        display: flex;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+    }
+
+    .feature-item i {
+        color: #ffc107;
+        font-size: 1.1rem;
+    }
+
+    .service-hero-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .service-details {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .service-content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
+
+    .service-types {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .service-type-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 4px solid #ffc107;
+    }
+
+    .service-type-icon {
+        background: #ffc107;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .service-type-card ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .service-type-card li {
+        padding: 0.25rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .service-type-card li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .pricing-card {
+        background: white;
+        border: 2px solid #ffc107;
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .price-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .price-item:last-child {
+        border-bottom: none;
+    }
+
+    .price-note {
+        font-size: 0.9rem;
+        color: #666;
+        font-style: italic;
+        margin: 1rem 0;
+    }
+
+    .service-areas {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .service-areas ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .service-areas li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .service-areas li:last-child {
+        border-bottom: none;
+    }
+
+    .process-section {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+
+    .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .process-step {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .step-number {
+        background: #ffc107;
+        color: #333;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 auto 1.5rem;
+    }
+
+    .faq-section {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .faq-item {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .faq-item h3 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .faq-item p {
+        color: #666;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .service-content-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero-features {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .service-hero-actions {
+            flex-direction: column;
+        }
+
+        .process-steps {
+            grid-template-columns: 1fr;
+        }
+
+        .faq-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</body>
+</html>

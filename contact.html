@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sweepo for professional cleaning services in New Zealand. Get in touch for quotes, bookings, or any questions.">
+    <title>Contact Sweepo | Get In Touch - We sweep, you relax</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <h1>Sweepo</h1>
+                <p class="slogan">We sweep, you relax</p>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/home-cleaning.html">Home Cleaning</a></li>
+                            <li><a href="services/commercial-cleaning.html">Commercial Cleaning</a></li>
+                            <li><a href="services/pest-control.html">Pest Control</a></li>
+                            <li><a href="services/garbage-removal.html">Garbage Removal</a></li>
+                            <li><a href="services/lawn-garden.html">Lawn & Garden</a></li>
+                            <li><a href="services/car-valet.html">Car Valet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="company.html" class="nav-link">Company Details</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+64-21-123-4567" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    <span class="btn-text">Call Now</span>
+                </a>
+                <button class="btn btn-quote" onclick="openQuoteModal()">
+                    <i class="fas fa-calculator"></i>
+                    <span class="btn-text">Get a Quote</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Contact Us</span>
+            </div>
+
+            <h1>Get In Touch With Sweepo</h1>
+            <p>Ready to experience professional cleaning services? Contact us today for a free quote or to schedule your cleaning service.</p>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with our team</p>
+                    <a href="tel:+64-21-123-4567" class="contact-link">+64 21 123 4567</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us your questions</p>
+                    <a href="mailto:info@sweepo.co.nz" class="contact-link">info@sweepo.co.nz</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Available 24/7</h3>
+                    <p>Emergency cleaning services</p>
+                    <span class="contact-link">Round the clock</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service (optional)</option>
+                            <option value="home-cleaning">Home Cleaning</option>
+                            <option value="commercial-cleaning">Commercial Cleaning</option>
+                            <option value="pest-control">Pest Control</option>
+                            <option value="garbage-removal">Garbage Removal</option>
+                            <option value="lawn-garden">Lawn & Garden</option>
+                            <option value="car-valet">Car Valet</option>
+                            <option value="quote-request">Quote Request</option>
+                            <option value="general-inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="What can we help you with?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry or cleaning requirements..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for cleaning tips and special offers
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Head Office</strong>
+                                <p>123 Queen Street<br>Auckland 1010<br>New Zealand</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:+64-21-123-4567">+64 21 123 4567</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@sweepo.co.nz">info@sweepo.co.nz</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>Website</strong>
+                                <p><a href="https://sweepo.co.nz">sweepo.co.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Business Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Monday - Friday</span>
+                            <span>7:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Saturday</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sunday</span>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="hours-item emergency">
+                            <span>Emergency Services</span>
+                            <span>24/7 Available</span>
+                        </div>
+                    </div>
+                    <p class="hours-note">
+                        <i class="fas fa-info-circle"></i>
+                        Emergency cleaning services available 24/7 for urgent situations
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Service Areas</h3>
+                    <div class="service-areas-list">
+                        <div class="area-column">
+                            <ul>
+                                <li>Auckland</li>
+                                <li>Wellington</li>
+                                <li>Christchurch</li>
+                                <li>Hamilton</li>
+                            </ul>
+                        </div>
+                        <div class="area-column">
+                            <ul>
+                                <li>Tauranga</li>
+                                <li>Dunedin</li>
+                                <li>Palmerston North</li>
+                                <li>Rotorua</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="areas-note">
+                        Don't see your area? <a href="#" onclick="openQuoteModal()">Contact us</a> - we may still be able to help!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team Contact Images -->
+<section class="team-contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Friendly Team</h2>
+            <p>Meet the people behind Sweepo's exceptional service</p>
+        </div>
+
+        <div class="team-contact-grid">
+            <!-- Note: Replace these placeholders with the actual team contact images you uploaded -->
+            <div class="team-contact-item">
+                <div class="team-image">
+                    <img src="assets/images/team/customer-service-team.jpg" alt="Customer Service Team" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3>Customer Service Team</h3>
+                    <p>Our dedicated customer service team is here to help you with bookings, questions, and ensuring your complete satisfaction.</p>
+                    <div class="team-contact-details">
+                        <p><i class="fas fa-phone"></i> Direct Line: +64 21 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> support@sweepo.co.nz</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-contact-item">
+                <div class="team-image">
+                    <img src="assets/images/team/cleaning-specialists.jpg" alt="Cleaning Specialists" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3>Professional Cleaning Specialists</h3>
+                    <p>Our experienced cleaning professionals are trained, insured, and committed to delivering exceptional results every time.</p>
+                    <div class="team-contact-details">
+                        <p><i class="fas fa-shield-alt"></i> Fully Licensed & Insured</p>
+                        <p><i class="fas fa-certificate"></i> Professionally Trained</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-contact-item">
+                <div class="team-image">
+                    <img src="assets/images/team/management-team.jpg" alt="Management Team" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3>Management Team</h3>
+                    <p>Our management team oversees all operations to ensure consistent quality and customer satisfaction across all services.</p>
+                    <div class="team-contact-details">
+                        <p><i class="fas fa-users"></i> Quality Assurance</p>
+                        <p><i class="fas fa-star"></i> 100% Satisfaction Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Quote CTA -->
+<section class="quick-quote-cta">
+    <div class="container">
+        <div class="quote-cta-content">
+            <div class="quote-cta-text">
+                <h2>Need a Quick Quote?</h2>
+                <p>Get an instant estimate for your cleaning needs in under 2 minutes</p>
+            </div>
+            <div class="quote-cta-actions">
+                <button class="btn btn-primary btn-large" onclick="openQuoteModal()">
+                    <i class="fas fa-calculator"></i> Get Instant Quote
+                </button>
+                <a href="tel:+64-21-123-4567" class="btn btn-call btn-large">
+                    <i class="fas fa-phone"></i> Call Now: +64 21 123 4567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>Sweepo</h3>
+                    <p class="footer-slogan">We sweep, you relax</p>
+                </div>
+                <p>Professional cleaning services available 24/7 across New Zealand. Trusted by thousands of satisfied customers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/home-cleaning.html">Home Cleaning</a></li>
+                    <li><a href="services/commercial-cleaning.html">Commercial Cleaning</a></li>
+                    <li><a href="services/pest-control.html">Pest Control</a></li>
+                    <li><a href="services/garbage-removal.html">Garbage Removal</a></li>
+                    <li><a href="services/lawn-garden.html">Lawn & Garden</a></li>
+                    <li><a href="services/car-valet.html">Car Valet</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" onclick="openQuoteModal()">Get Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +64 21 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sweepo.co.nz</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Auckland, New Zealand</p>
+                    <p><i class="fas fa-clock"></i> 24/7 Service Available</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sweepo. All rights reserved. | Website: sweepo.co.nz</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Get Your Free Quote</h3>
+            <span class="close" onclick="closeQuoteModal()">&times;</span>
+        </div>
+        <form id="quoteForm" class="quote-form">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Type *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="home-cleaning">Home Cleaning</option>
+                    <option value="commercial-cleaning">Commercial Cleaning</option>
+                    <option value="pest-control">Pest Control</option>
+                    <option value="garbage-removal">Garbage Removal</option>
+                    <option value="lawn-garden">Lawn & Garden</option>
+                    <option value="car-valet">Car Valet</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Property Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please describe your cleaning requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+                Submit Quote Request
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+<script>
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+
+        // Show loading state
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.disabled = true;
+
+        // Collect form data
+        const formData = new FormData(form);
+        const contactData = {
+            firstName: formData.get('firstName'),
+            lastName: formData.get('lastName'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            service: formData.get('service'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+            newsletter: formData.get('newsletter') === 'yes',
+            timestamp: new Date().toISOString(),
+            type: 'contact_form'
+        };
+
+        try {
+            // Simulate API call (replace with actual endpoint)
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            // Show success message
+            showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+            form.reset();
+
+        } catch (error) {
+            console.error('Contact form error:', error);
+            showNotification('Failed to send message. Please try again or call us directly.', 'error');
+        } finally {
+            // Reset button state
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+        }
+    });
+</script>
+
+<style>
+    /* Contact-specific styles */
+    .contact-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 140px 0 80px;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: #666;
+    }
+
+    .breadcrumb a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .breadcrumb i {
+        margin: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .contact-method {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .method-icon {
+        background: #007bff;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+    }
+
+    .contact-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+
+    .contact-content {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
+
+    .contact-form {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+        width: auto;
+        margin: 0;
+    }
+
+    .info-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+    }
+
+    .info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .info-item i {
+        color: #007bff;
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+        min-width: 20px;
+    }
+
+    .info-item strong {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .info-item p {
+        margin: 0;
+        color: #666;
+    }
+
+    .info-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .hours-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hours-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hours-item:last-child {
+        border-bottom: none;
+    }
+
+    .hours-item.emergency {
+        color: #007bff;
+        font-weight: 600;
+    }
+
+    .hours-note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hours-note i {
+        color: #17a2b8;
+    }
+
+    .service-areas-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .service-areas-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .service-areas-list li {
+        padding: 0.25rem 0;
+        color: #666;
+    }
+
+    .areas-note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .areas-note a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .team-contact {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+
+    .team-contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-contact-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .team-image {
+        height: 200px;
+        background: #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 1.1rem;
+    }
+
+    .team-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .team-info {
+        padding: 2rem;
+    }
+
+    .team-info h3 {
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .team-info p {
+        color: #666;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .team-contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .team-contact-details p {
+        margin: 0;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .team-contact-details i {
+        color: #007bff;
+        width: 16px;
+    }
+
+    .quick-quote-cta {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        padding: 60px 0;
+    }
+
+    .quote-cta-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .quote-cta-text h2 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .quote-cta-text p {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+    .quote-cta-actions {
+        display: flex;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .service-areas-list {
+            grid-template-columns: 1fr;
+        }
+
+        .quote-cta-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .quote-cta-actions {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .team-contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</body>
+</html>

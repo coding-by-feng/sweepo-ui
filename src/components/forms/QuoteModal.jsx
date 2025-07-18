@@ -8,9 +8,13 @@ const INITIAL_VALUES = {
     name: '',
     email: '',
     phone: '',
-    service: '',
     address: '',
-    message: ''
+    propertyType: '',
+    service: '',
+    frequency: '',
+    bedrooms: '',
+    bathrooms: '',
+    additionalInfo: ''
 };
 
 const QuoteModal = () => {
@@ -19,18 +23,40 @@ const QuoteModal = () => {
     // Memoize the handleSubmit function to prevent recreation on every render
     // This prevents the useForm hook from being recreated unnecessarily
     const handleSubmit = useMemo(() => async (formData) => {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        try {
+            const response = await fetch('/api/quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    address: formData.address,
+                    propertyType: formData.propertyType,
+                    service: formData.service,
+                    frequency: formData.frequency,
+                    bedrooms: parseInt(formData.bedrooms) || 0,
+                    bathrooms: parseInt(formData.bathrooms) || 0,
+                    additionalInfo: formData.additionalInfo
+                })
+            });
 
-        console.log('Quote request:', {
-            ...formData,
-            timestamp: new Date().toISOString(),
-            source: 'website'
-        });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
 
-        // Show success message
-        alert('Quote request submitted successfully! We\'ll contact you within 24 hours.');
-        closeQuoteModal();
+            const result = await response.json();
+            console.log('Quote request successful:', result);
+
+            // Show success message
+            alert('Quote request submitted successfully! We\'ll contact you within 24 hours.');
+            closeQuoteModal();
+        } catch (error) {
+            console.error('Error submitting quote request:', error);
+            alert('There was an error submitting your quote request. Please try again or contact us directly.');
+        }
     }, [closeQuoteModal]);
 
     const { values, errors, isSubmitting, handleChange, handleSubmit: onSubmit, reset } = useForm(
@@ -128,44 +154,116 @@ const QuoteModal = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="service">Service Type *</label>
-                        <select
-                            id="service"
-                            name="service"
-                            value={values.service}
-                            onChange={handleChange}
-                            required
-                        >
-                            <option value="">Select a service</option>
-                            <option value="home-cleaning">Home Cleaning</option>
-                            <option value="commercial-cleaning">Commercial Cleaning</option>
-                            <option value="pest-control">Pest Control</option>
-                            <option value="garbage-removal">Garbage Removal</option>
-                            <option value="lawn-garden">Lawn & Garden</option>
-                            <option value="car-valet">Car Valet</option>
-                        </select>
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="address">Property Address</label>
+                        <label htmlFor="address">Property Address *</label>
                         <input
                             type="text"
                             id="address"
                             name="address"
                             value={values.address}
                             onChange={handleChange}
+                            className={errors.address ? 'error' : ''}
+                            required
                         />
+                        {errors.address && <span className="error-message">{errors.address}</span>}
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="message">Additional Details</label>
+                        <label htmlFor="propertyType">Property Type *</label>
+                        <select
+                            id="propertyType"
+                            name="propertyType"
+                            value={values.propertyType}
+                            onChange={handleChange}
+                            className={errors.propertyType ? 'error' : ''}
+                            required
+                        >
+                            <option value="">Select property type</option>
+                            <option value="House">House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Townhouse">Townhouse</option>
+                            <option value="Office">Office</option>
+                            <option value="Commercial">Commercial</option>
+                        </select>
+                        {errors.propertyType && <span className="error-message">{errors.propertyType}</span>}
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="service">Service Type *</label>
+                        <select
+                            id="service"
+                            name="service"
+                            value={values.service}
+                            onChange={handleChange}
+                            className={errors.service ? 'error' : ''}
+                            required
+                        >
+                            <option value="">Select a service</option>
+                            <option value="Regular Cleaning">Regular Cleaning</option>
+                            <option value="Deep Cleaning">Deep Cleaning</option>
+                            <option value="Commercial Cleaning">Commercial Cleaning</option>
+                            <option value="Pest Control">Pest Control</option>
+                            <option value="Garbage Removal">Garbage Removal</option>
+                            <option value="Lawn & Garden">Lawn & Garden</option>
+                            <option value="Car Valet">Car Valet</option>
+                        </select>
+                        {errors.service && <span className="error-message">{errors.service}</span>}
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="frequency">Frequency *</label>
+                        <select
+                            id="frequency"
+                            name="frequency"
+                            value={values.frequency}
+                            onChange={handleChange}
+                            className={errors.frequency ? 'error' : ''}
+                            required
+                        >
+                            <option value="">Select frequency</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Bi-weekly">Bi-weekly</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="One-time">One-time</option>
+                        </select>
+                        {errors.frequency && <span className="error-message">{errors.frequency}</span>}
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group form-group-half">
+                            <label htmlFor="bedrooms">Bedrooms</label>
+                            <input
+                                type="number"
+                                id="bedrooms"
+                                name="bedrooms"
+                                value={values.bedrooms}
+                                onChange={handleChange}
+                                min="0"
+                                max="10"
+                            />
+                        </div>
+                        <div className="form-group form-group-half">
+                            <label htmlFor="bathrooms">Bathrooms</label>
+                            <input
+                                type="number"
+                                id="bathrooms"
+                                name="bathrooms"
+                                value={values.bathrooms}
+                                onChange={handleChange}
+                                min="0"
+                                max="10"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="additionalInfo">Additional Information</label>
                         <textarea
-                            id="message"
-                            name="message"
-                            value={values.message}
+                            id="additionalInfo"
+                            name="additionalInfo"
+                            value={values.additionalInfo}
                             onChange={handleChange}
                             rows="4"
-                            placeholder="Please describe your cleaning requirements..."
+                            placeholder="Please describe any specific requirements or additional details..."
                         />
                     </div>
 

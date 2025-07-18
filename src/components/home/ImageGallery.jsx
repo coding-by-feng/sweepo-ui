@@ -6,32 +6,32 @@ const ImageGallery = () => {
     // Array of images from the public/images directory - only six main service images
     const images = [
         {
-            src: '/images/services/home-cleaning-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/home-cleaning-1.jpg`,
             alt: 'Professional Home Cleaning Services',
             title: 'Home Cleaning'
         },
         {
-            src: '/images/services/commercial-cleaning-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/commercial-cleaning-1.jpg`,
             alt: 'Commercial Cleaning Services',
             title: 'Commercial Cleaning'
         },
         {
-            src: '/images/services/car-valet-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/car-valet-1.jpg`,
             alt: 'Car Valet Services',
             title: 'Car Valet'
         },
         {
-            src: '/images/services/pest-control-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/pest-control-1.jpg`,
             alt: 'Pest Control Services',
             title: 'Pest Control'
         },
         {
-            src: '/images/services/garbage-removal-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/garbage-removal-1.jpg`,
             alt: 'Garbage Removal Services',
             title: 'Garbage Removal'
         },
         {
-            src: '/images/services/lawn-garden-1.jpg',
+            src: `${process.env.PUBLIC_URL}/images/services/lawn-garden-1.jpg`,
             alt: 'Lawn & Garden Services',
             title: 'Lawn & Garden'
         }
@@ -70,7 +70,7 @@ const ImageGallery = () => {
                         className="gallery-main-image"
                         onError={(e) => {
                             // Fallback to a placeholder if image fails to load
-                            e.target.src = '/images/hero-fallback.jpg';
+                            e.target.src = `${process.env.PUBLIC_URL}/images/hero-fallback.jpg`;
                         }}
                     />
                     
@@ -111,7 +111,7 @@ const ImageGallery = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 onError={(e) => {
-                                    e.target.src = '/images/hero-fallback.jpg';
+                                    e.target.src = `${process.env.PUBLIC_URL}/images/hero-fallback.jpg`;
                                 }}
                             />
                         </button>

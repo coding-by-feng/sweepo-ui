@@ -5,6 +5,7 @@ import { useModal } from '../../hooks/useModal';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
     const { openQuoteModal } = useModal();
     const location = useLocation();
 
@@ -23,6 +24,11 @@ const Header = () => {
 
     const toggleMobileMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        setActiveDropdown(null); // Close any open dropdowns when toggling menu
+    };
+
+    const toggleDropdown = (dropdownName) => {
+        setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
     };
 
     const isActivePath = (path) => {
@@ -48,17 +54,21 @@ const Header = () => {
                                     Home
                                 </Link>
                             </li>
-                            <li className="dropdown">
-                <span className="nav-link">
-                  Services <i className="fas fa-chevron-down"></i>
-                </span>
+                            <li className={`dropdown ${activeDropdown === 'services' ? 'active' : ''}`}>
+                                <span 
+                                    className="nav-link"
+                                    onClick={() => toggleDropdown('services')}
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    Services <i className={`fas fa-chevron-${activeDropdown === 'services' ? 'up' : 'down'}`}></i>
+                                </span>
                                 <ul className="dropdown-menu">
-                                    <li><Link to="/services/home-cleaning">Home Cleaning</Link></li>
-                                    <li><Link to="/services/commercial-cleaning">Commercial Cleaning</Link></li>
-                                    <li><Link to="/services/pest-control">Pest Control</Link></li>
-                                    <li><Link to="/services/garbage-removal">Garbage Removal</Link></li>
-                                    <li><Link to="/services/lawn-garden">Lawn & Garden</Link></li>
-                                    <li><Link to="/services/car-valet">Car Valet</Link></li>
+                                    <li><Link to="/services/home-cleaning" onClick={() => setIsMenuOpen(false)}>Home Cleaning</Link></li>
+                                    <li><Link to="/services/commercial-cleaning" onClick={() => setIsMenuOpen(false)}>Commercial Cleaning</Link></li>
+                                    <li><Link to="/services/pest-control" onClick={() => setIsMenuOpen(false)}>Pest Control</Link></li>
+                                    <li><Link to="/services/garbage-removal" onClick={() => setIsMenuOpen(false)}>Garbage Removal</Link></li>
+                                    <li><Link to="/services/lawn-garden" onClick={() => setIsMenuOpen(false)}>Lawn & Garden</Link></li>
+                                    <li><Link to="/services/car-valet" onClick={() => setIsMenuOpen(false)}>Car Valet</Link></li>
                                 </ul>
                             </li>
                             <li>

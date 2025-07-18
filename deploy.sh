@@ -6,8 +6,8 @@
 set -e  # Exit on any error
 
 # Configuration
-CONTAINER_NAME="sweepo-ui"
-IMAGE_NAME="sweepo-ui:latest"
+CONTAINER_NAME="sweep-ui"
+IMAGE_NAME="sweep-ui:latest"
 PORT=1968
 BUILD_DIR="build"
 
@@ -71,10 +71,21 @@ print_success "Docker daemon is running"
 # Stop and remove existing container if it exists
 print_status "Checking for existing container..."
 if docker ps -a --format 'table {{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then
-    print_warning "Stopping and removing existing container: ${CONTAINER_NAME}"
-    docker stop ${CONTAINER_NAME} >/dev/null 2>&1 || true
-    docker rm ${CONTAINER_NAME} >/dev/null 2>&1 || true
+    print_warning "Found existing container: ${CONTAINER_NAME}"
+    
+    # Force stop the container if it's running
+    if docker ps --format 'table {{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then
+        print_status "Forcefully stopping running container..."
+        docker kill ${CONTAINER_NAME} >/dev/null 2>&1 || true
+        sleep 1
+    fi
+    
+    # Remove the container
+    print_status "Removing existing container..."
+    docker rm -f ${CONTAINER_NAME} >/dev/null 2>&1 || true
     print_success "Existing container removed"
+else
+    print_status "No existing container found"
 fi
 
 # Remove existing image if it exists

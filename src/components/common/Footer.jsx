@@ -15,11 +15,6 @@ const Footer = () => {
                             <p className="footer-slogan">We sweep, you relax</p>
                         </div>
                         <p>Professional cleaning services available 24/7 across New Zealand. Trusted by thousands of satisfied customers.</p>
-                        <div className="social-links">
-                            <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-                            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
-                        </div>
                     </div>
 
                     <div className="footer-section">
@@ -47,16 +42,22 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Contact Info</h4>
                         <div className="contact-info">
-                            <p><i className="fas fa-phone"></i> +64 21 123 4567</p>
-                            <p><i className="fas fa-envelope"></i> info@sweepo.co.nz</p>
+                            <p><i className="fas fa-phone"></i> 02904310340</p>
+                            <p><i className="fas fa-envelope"></i> roy@sweepo.co.nz</p>
                             <p><i className="fas fa-map-marker-alt"></i> Auckland, New Zealand</p>
                             <p><i className="fas fa-clock"></i> 24/7 Service Available</p>
+                            <div className="social-links" style={{ marginTop: '1rem', display: 'flex', gap: '1rem' }}>
+                                <a href="#" aria-label="Facebook" style={{ fontSize: '1.5rem', color: '#1877F2' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+                                <a href="#" aria-label="Instagram" style={{ fontSize: '1.5rem', color: '#E4405F' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                                <a href="https://linkedin.com/company/sweeponz" aria-label="LinkedIn" style={{ fontSize: '1.5rem', color: '#0A66C2' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                                <a href="https://www.youtube.com/@SweepoNZ" aria-label="YouTube" style={{ fontSize: '1.5rem', color: '#FF0000' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2025 Sweepo. All rights reserved. | Website: sweepo.co.nz</p>
+                    <p>&copy; 2025 Sweepo. All rights reserved.</p>
                 </div>
             </div>
         </footer>

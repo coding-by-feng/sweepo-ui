@@ -19,13 +19,6 @@ const CommercialCleaning = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Commercial Cleaning</span>
-                        </div>
 
                         <h1>Professional Commercial Cleaning Services</h1>
                         <p>Maintain a clean, professional workspace that impresses clients and boosts employee productivity. Our comprehensive commercial cleaning solutions are tailored to your business needs.</p>
@@ -49,14 +42,6 @@ const CommercialCleaning = () => {
                             </div>
                         </div>
 
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Get Free Assessment
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -164,9 +149,6 @@ const CommercialCleaning = () => {
                                     <strong>Custom Quote</strong>
                                 </div>
                                 <p className="price-note">*Prices based on weekly service. Discounts available for longer contracts.</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Custom Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

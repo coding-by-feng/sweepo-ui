@@ -19,13 +19,6 @@ const HomeCleaning = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Home Cleaning</span>
-                        </div>
 
                         <h1>Professional Home Cleaning Services</h1>
                         <p>Transform your home into a spotless sanctuary with our comprehensive residential cleaning services. From regular maintenance to deep cleaning, we make your home shine.</p>
@@ -49,14 +42,6 @@ const HomeCleaning = () => {
                             </div>
                         </div>
 
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Get Free Quote
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -160,9 +145,6 @@ const HomeCleaning = () => {
                                     <strong>From $120</strong>
                                 </div>
                                 <p className="price-note">*Prices vary based on home size and specific requirements. Free quotes available.</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Custom Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

@@ -10,64 +10,50 @@ main {
 
 /* Service Page Specific Styles */
 .service-hero {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 140px 0 80px;
-    position: relative;
-}
-
-.breadcrumb {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    color: #666;
-}
-
-.breadcrumb a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.breadcrumb i {
-    margin: 0 0.5rem;
-    font-size: 0.8rem;
+    padding: 120px 0 60px;
+    background: var(--color-bg);
 }
 
 .service-hero-content {
-    text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.service-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+.service-hero-content p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
 }
 
 .service-hero-features {
     display: flex;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #666;
+    font-weight: 500;
+    color: var(--color-secondary);
 }
 
 .feature-item i {
-    color: #28a745;
-    font-size: 1.1rem;
-}
-
-.service-hero-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    color: var(--color-primary);
 }
 
 .service-details {
-    padding: 80px 0;
-    background: white;
+    padding: 60px 0;
+    background: var(--color-bg);
 }
 
 .service-content-grid {
@@ -272,7 +258,7 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    color: #007bff;
+    color: var(--color-primary);
 }
 
 .member-info {
@@ -285,7 +271,7 @@ main {
 }
 
 .member-role {
-    color: #007bff;
+    color: var(--color-primary);
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -368,6 +354,34 @@ main {
     justify-content: center;
     color: #666;
     font-style: italic;
+}
+
+.cta-section {
+    background: white;
+    color: black;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.cta-section .btn {
+    background: var(--color-primary);
+    color: black;
+    border-color: var(--color-primary);
+}
+
+.cta-section .btn:hover {
+    background: #ccc;
+    border-color: #ccc;
 }
 
 /* Responsive adjustments for service pages */

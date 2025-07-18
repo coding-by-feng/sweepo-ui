@@ -19,13 +19,6 @@ const CarValet = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Car Valet</span>
-                        </div>
 
                         <h1>Professional Car Valet & Detailing Services</h1>
                         <p>Keep your vehicle looking its absolute best with our comprehensive car valet and detailing services. From basic washes to premium protection packages, we restore and maintain your car's appearance inside and out.</p>
@@ -49,14 +42,7 @@ const CarValet = () => {
                             </div>
                         </div>
 
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Book Car Valet
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -164,9 +150,6 @@ const CarValet = () => {
                                     <strong>+$15 travel fee</strong>
                                 </div>
                                 <p className="price-note">*Prices vary based on vehicle size, condition, and selected services. Package deals available.</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Custom Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

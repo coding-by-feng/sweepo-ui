@@ -19,14 +19,6 @@ const PestControl = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Pest Control</span>
-                        </div>
-
                         <h1>Professional Pest Control Services</h1>
                         <p>Protect your property from unwanted pests with our safe, effective, and environmentally responsible pest control solutions. We eliminate current infestations and prevent future problems.</p>
 
@@ -47,15 +39,6 @@ const PestControl = () => {
                                 <i className="fas fa-thumbs-up"></i>
                                 <span>100% Satisfaction Guaranteed</span>
                             </div>
-                        </div>
-
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Get Free Inspection
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -164,9 +147,6 @@ const PestControl = () => {
                                     <strong>From $80/visit</strong>
                                 </div>
                                 <p className="price-note">*Prices vary based on property size, pest type, and treatment complexity</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Exact Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

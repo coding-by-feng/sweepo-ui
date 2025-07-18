@@ -1,22 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { useModal } from '../../hooks/useModal';
+import ImageGallery from './ImageGallery';
 
 const Hero = () => {
     const { openQuoteModal } = useModal();
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(true);
-
-    const toggleVideo = () => {
-        if (videoRef.current) {
-            if (videoRef.current.paused) {
-                videoRef.current.play();
-                setIsPlaying(true);
-            } else {
-                videoRef.current.pause();
-                setIsPlaying(false);
-            }
-        }
-    };
 
     return (
         <section className="hero">
@@ -56,41 +43,8 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-media">
-                        <div className="hero-video-container">
-                            <video
-                                ref={videoRef}
-                                className="hero-video"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                poster="/images/video-poster.jpg"
-                            >
-                                <source src="/videos/cleaning-services.mp4" type="video/mp4" />
-                                <source src="/videos/cleaning-services.webm" type="video/webm" />
-                                <img
-                                    src="/images/hero-fallback.jpg"
-                                    alt="Professional Cleaning Services"
-                                    className="video-fallback"
-                                />
-                            </video>
-
-                            <div className="video-overlay">
-                                <button
-                                    className="video-control"
-                                    onClick={toggleVideo}
-                                    aria-label="Play/Pause Video"
-                                >
-                                    <i className={`fas fa-${isPlaying ? 'pause' : 'play'}`}></i>
-                                </button>
-                            </div>
-
-                            <div className="video-content-overlay">
-                                <div className="overlay-badge">
-                                    <i className="fas fa-play-circle"></i>
-                                    <span>Watch Our Team in Action</span>
-                                </div>
-                            </div>
+                        <div className="hero-gallery-container">
+                            <ImageGallery />
                         </div>
 
                         <div className="service-highlights">

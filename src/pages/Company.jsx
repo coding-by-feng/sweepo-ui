@@ -11,16 +11,9 @@ const Company = () => {
                 <meta name="keywords" content="about sweepo, cleaning company new zealand, professional cleaning team, eco-friendly cleaning" />
             </Helmet>
 
-            {/* Company Hero */}
-            <section className="company-hero">
-                <div className="container">
-                    <h1>About Sweepo</h1>
-                    <p>New Zealand's most trusted professional cleaning service</p>
-                </div>
-            </section>
 
             {/* Company Story */}
-            <section className="section">
+            <section className="section" style={{ paddingTop: '140px' }}>
                 <div className="container">
                     <div className="section-header">
                         <h2>Our Story</h2>
@@ -150,45 +143,29 @@ const Company = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', textAlign: 'center' }}>
                         <div style={{ padding: '2rem' }}>
-                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#007bff', marginBottom: '0.5rem' }}>5,000+</div>
+                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>5,000+</div>
                             <p style={{ margin: 0, color: '#666', fontSize: '1.1rem' }}>Happy Customers</p>
                         </div>
 
                         <div style={{ padding: '2rem' }}>
-                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#007bff', marginBottom: '0.5rem' }}>10,000+</div>
+                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>10,000+</div>
                             <p style={{ margin: 0, color: '#666', fontSize: '1.1rem' }}>Jobs Completed</p>
                         </div>
 
                         <div style={{ padding: '2rem' }}>
-                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#007bff', marginBottom: '0.5rem' }}>5+</div>
+                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>5+</div>
                             <p style={{ margin: 0, color: '#666', fontSize: '1.1rem' }}>Years of Experience</p>
                         </div>
 
                         <div style={{ padding: '2rem' }}>
-                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#007bff', marginBottom: '0.5rem' }}>24/7</div>
+                            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>24/7</div>
                             <p style={{ margin: 0, color: '#666', fontSize: '1.1rem' }}>Service Available</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="cta">
-                <div className="container">
-                    <div className="cta-content">
-                        <h2>Ready to Experience the Sweepo Difference?</h2>
-                        <p>Join thousands of satisfied customers across New Zealand</p>
-                        <div className="cta-buttons">
-                            <button className="btn btn-primary btn-large" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                                Get Free Quote
-                            </button>
-                            <a href={`tel:${COMPANY_INFO.phone}`} className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> {COMPANY_INFO.phone}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         </>
     );
 };

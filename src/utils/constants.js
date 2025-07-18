@@ -94,10 +94,10 @@ export const SERVICES = [
 export const COMPANY_INFO = {
     name: 'Sweepo',
     slogan: 'We sweep, you relax',
-    phone: '+64 21 123 4567',
-    email: 'info@sweepo.co.nz',
-    address: 'Auckland, New Zealand',
-    website: 'sweepo.co.nz',
+    phone: '02904310340',
+    email: 'roy@sweepo.co.nz',
+    address: '15C/15 Whitaker Place, Grafton, Auckland 1010',
+    website: 'https://sweepo.co.nz',
     hours: '24/7 Service Available',
     description: 'Professional cleaning services available 24/7 across New Zealand. Trusted by thousands of satisfied customers.'
 };

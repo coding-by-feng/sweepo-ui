@@ -1,20 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useModal } from '../../hooks/useModal';
 import { useForm } from '../../hooks/useForm';
+
+// Move initialValues outside component to prevent recreation on every render
+// This is one of the key fixes - creating a stable reference
+const INITIAL_VALUES = {
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    address: '',
+    message: ''
+};
 
 const QuoteModal = () => {
     const { isQuoteModalOpen, closeQuoteModal } = useModal();
 
-    const initialValues = {
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        address: '',
-        message: ''
-    };
-
-    const handleSubmit = async (formData) => {
+    // Memoize the handleSubmit function to prevent recreation on every render
+    // This prevents the useForm hook from being recreated unnecessarily
+    const handleSubmit = useMemo(() => async (formData) => {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -27,13 +31,14 @@ const QuoteModal = () => {
         // Show success message
         alert('Quote request submitted successfully! We\'ll contact you within 24 hours.');
         closeQuoteModal();
-    };
+    }, [closeQuoteModal]);
 
     const { values, errors, isSubmitting, handleChange, handleSubmit: onSubmit, reset } = useForm(
-        initialValues,
+        INITIAL_VALUES,
         handleSubmit
     );
 
+    // This useEffect now has stable dependencies and won't cause infinite re-renders
     useEffect(() => {
         if (isQuoteModalOpen) {
             document.body.style.overflow = 'hidden';
@@ -45,7 +50,7 @@ const QuoteModal = () => {
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [isQuoteModalOpen, reset]);
+    }, [isQuoteModalOpen, reset]); // reset is now memoized, so it won't change on every render
 
     useEffect(() => {
         const handleEscape = (e) => {

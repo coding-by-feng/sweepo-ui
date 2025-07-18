@@ -19,13 +19,6 @@ const LawnGarden = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Lawn & Garden</span>
-                        </div>
 
                         <h1>Professional Lawn Care & Garden Maintenance</h1>
                         <p>Transform your outdoor spaces into beautiful, healthy landscapes with our comprehensive lawn care and garden maintenance services. From regular upkeep to complete landscape design, we make your property shine.</p>
@@ -49,14 +42,6 @@ const LawnGarden = () => {
                             </div>
                         </div>
 
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Get Free Estimate
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -164,9 +149,6 @@ const LawnGarden = () => {
                                     <strong>From $120/visit</strong>
                                 </div>
                                 <p className="price-note">*Prices vary based on property size, service frequency, and specific requirements. Package discounts available.</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Custom Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

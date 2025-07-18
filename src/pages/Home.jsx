@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Hero from '../components/home/Hero';
 import ServicesOverview from '../components/home/ServicesOverview';
 import WhyChoose from '../components/home/WhyChoose';
-import Showcase from '../components/home/Showcase';
-import Testimonials from '../components/home/Testimonials';
+
 import QuoteModal from '../components/forms/QuoteModal';
 
 const Home = () => {
@@ -19,8 +18,7 @@ const Home = () => {
             <Hero />
             <ServicesOverview />
             <WhyChoose />
-            <Showcase />
-            <Testimonials />
+
             <QuoteModal />
         </>
     );

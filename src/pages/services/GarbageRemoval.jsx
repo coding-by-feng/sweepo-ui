@@ -19,14 +19,6 @@ const GarbageRemoval = () => {
             <section className="service-hero">
                 <div className="container">
                     <div className="service-hero-content">
-                        <div className="breadcrumb">
-                            <Link to="/">Home</Link>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Services</span>
-                            <i className="fas fa-chevron-right"></i>
-                            <span>Garbage Removal</span>
-                        </div>
-
                         <h1>Professional Garbage Removal & Waste Management</h1>
                         <p>Reliable waste collection and disposal services for homes and businesses. From regular pickups to one-time cleanouts, we handle all your waste management needs efficiently and responsibly.</p>
 
@@ -49,14 +41,7 @@ const GarbageRemoval = () => {
                             </div>
                         </div>
 
-                        <div className="service-hero-actions">
-                            <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
-                                Get Free Quote
-                            </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
-                            </a>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -164,9 +149,6 @@ const GarbageRemoval = () => {
                                     <strong>From $300</strong>
                                 </div>
                                 <p className="price-note">*Prices vary based on volume, frequency, and waste type. Recycling discounts available.</p>
-                                <button className="btn btn-primary" onClick={openQuoteModal}>
-                                    Get Custom Quote
-                                </button>
                             </div>
 
                             <div className="service-areas">

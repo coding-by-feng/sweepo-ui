@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 export const useForm = (initialValues, onSubmit) => {
     const [values, setValues] = useState(initialValues);
@@ -70,11 +70,13 @@ export const useForm = (initialValues, onSubmit) => {
         }
     };
 
-    const reset = () => {
+    // Memoize the reset function to prevent infinite re-renders
+    // This is the key fix - preventing the reset function from being recreated on every render
+    const reset = useCallback(() => {
         setValues(initialValues);
         setErrors({});
         setIsSubmitting(false);
-    };
+    }, [initialValues]);
 
     return {
         values,

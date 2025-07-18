@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from '../hooks/useForm';
 import { COMPANY_INFO } from '../utils/constants';
 
-const Contact = () => {
-    const initialValues = {
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-    };
+// Move initialValues outside component to prevent recreation on every render
+const INITIAL_VALUES = {
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+};
 
-    const handleSubmit = async (formData) => {
+const Contact = () => {
+    // Memoize the handleSubmit function to prevent recreation
+    const handleSubmit = useMemo(() => async (formData) => {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -24,10 +26,10 @@ const Contact = () => {
 
         // Show success message
         alert('Message sent successfully! We\'ll get back to you within 24 hours.');
-    };
+    }, []);
 
     const { values, errors, isSubmitting, handleChange, handleSubmit: onSubmit } = useForm(
-        initialValues,
+        INITIAL_VALUES,
         handleSubmit
     );
 
@@ -39,16 +41,9 @@ const Contact = () => {
                 <meta name="keywords" content="contact sweepo, cleaning services contact, new zealand cleaning, get quote" />
             </Helmet>
 
-            {/* Contact Hero */}
-            <section className="contact-hero">
-                <div className="container">
-                    <h1>Contact Us</h1>
-                    <p>Get in touch for quotes, bookings, or any questions you may have</p>
-                </div>
-            </section>
 
             {/* Contact Content */}
-            <section className="section">
+            <section className="section" style={{ paddingTop: '140px' }}>
                 <div className="container">
                     <div className="contact-content">
                         {/* Contact Form */}
@@ -192,10 +187,20 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            {/* Map Placeholder */}
-                            <div className="map-container">
-                                <p><i className="fas fa-map"></i> Service Area Map<br />
-                                    <small>We provide services throughout New Zealand</small></p>
+                            {/* Google Maps */}
+                            <div className="map-container" style={{ marginTop: '2rem' }}>
+                                <div style={{ width: '100%', height: '300px', borderRadius: '10px', overflow: 'hidden', border: '2px solid #ddd' }}>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.3!2d174.7633!3d-36.8485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6cd%3A0x4aa7f8715ee2d76d!2s15%20Whitaker%20Pl%2C%20Grafton%2C%20Auckland%201010%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1642678901234!5m2!1sen!2snz"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0 }}
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="Sweepo Office Location"
+                                    ></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>

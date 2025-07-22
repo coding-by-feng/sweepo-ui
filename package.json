@@ -2,7 +2,7 @@
   "name": "sweepo-react",
   "version": "1.0.0",
   "description": "Sweepo - Professional Cleaning Services Website",
-  "homepage": "/sweepo",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

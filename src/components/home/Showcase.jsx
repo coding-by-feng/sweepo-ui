@@ -9,21 +9,21 @@ const Showcase = () => {
             id: 1,
             title: 'Professional Equipment',
             description: 'State-of-the-art cleaning equipment for superior results',
-            image: '/images/showcase/equipment.jpg',
+            image: `${process.env.PUBLIC_URL}/images/showcase/equipment.jpg`,
             icon: 'fas fa-tools'
         },
         {
             id: 2,
             title: 'Trained Technicians',
             description: 'Experienced and certified cleaning professionals',
-            image: '/images/showcase/team.jpg',
+            image: `${process.env.PUBLIC_URL}/images/showcase/team.jpg`,
             icon: 'fas fa-users'
         },
         {
             id: 3,
             title: 'Quality Results',
             description: 'Spotless results that exceed expectations every time',
-            image: '/images/showcase/results.jpg',
+            image: `${process.env.PUBLIC_URL}/images/showcase/results.jpg`,
             icon: 'fas fa-star'
         }
     ];

@@ -108,7 +108,7 @@ export const TEAM_MEMBERS = [
         name: 'Sarah Johnson',
         role: 'Founder & CEO',
         bio: 'With over 15 years in the cleaning industry, Sarah founded Sweepo to provide exceptional cleaning services with a personal touch.',
-        image: '/images/team/sarah.jpg',
+        image: `${process.env.PUBLIC_URL}/images/team/sarah.jpg`,
         initials: 'SJ'
     },
     {
@@ -116,7 +116,7 @@ export const TEAM_MEMBERS = [
         name: 'Mike Chen',
         role: 'Operations Manager',
         bio: 'Mike ensures our operations run smoothly and our teams deliver consistent, high-quality service across all locations.',
-        image: '/images/team/mike.jpg',
+        image: `${process.env.PUBLIC_URL}/images/team/mike.jpg`,
         initials: 'MC'
     },
     {
@@ -124,7 +124,7 @@ export const TEAM_MEMBERS = [
         name: 'Emma Williams',
         role: 'Customer Experience Lead',
         bio: 'Emma focuses on customer satisfaction and continuously improves our service delivery to exceed client expectations.',
-        image: '/images/team/emma.jpg',
+        image: `${process.env.PUBLIC_URL}/images/team/emma.jpg`,
         initials: 'EW'
     }
 ];

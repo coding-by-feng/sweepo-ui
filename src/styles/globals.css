@@ -1,16 +1,16 @@
 /* Color Theme Variables: Custom Orange */
 :root {
-  --color-primary: #f4b330; /* Custom Orange */
-  --color-primary-dark: #d49a26;
+  --color-primary: #1a0c49; /* Custom Dark Purple */
+  --color-primary-dark: #150a3d;
   --color-secondary: #333333; /* Dark Grey */
-  --color-accent: #f6c555; /* Lighter Accent Orange */
+  --color-accent: #2d1560; /* Lighter Accent Purple */
   --color-bg: #FFFFFF; /* White Background */
   --color-text: #333333;
   --color-muted: #666666;
   --color-footer-bg: var(--color-primary);
   --color-footer-text: var(--color-secondary);
-  --color-link: #d49a26;
-  --color-link-hover: #e6a72e;
+  --color-link: #1a0c49;
+  --color-link-hover: #2d1560;
 }
 
 /* Global Styles and Reset */

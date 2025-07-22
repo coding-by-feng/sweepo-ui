@@ -50,11 +50,21 @@ fi
 
 if ! command_exists node; then
     print_error "Node.js is not installed or not in PATH"
+    echo ""
+    echo -e "${YELLOW}To install Node.js on Ubuntu/Debian:${NC}"
+    echo -e "${BLUE}  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -${NC}"
+    echo -e "${BLUE}  sudo apt install -y nodejs${NC}"
+    echo ""
+    echo -e "${YELLOW}Alternative installation methods:${NC}"
+    echo -e "${BLUE}  Using snap: sudo snap install node --classic${NC}"
+    echo -e "${BLUE}  Using nvm:  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash${NC}"
+    echo ""
     exit 1
 fi
 
 if ! command_exists npm; then
     print_error "npm is not installed or not in PATH"
+    echo -e "${YELLOW}npm is usually installed with Node.js. Try installing Node.js first.${NC}"
     exit 1
 fi
 

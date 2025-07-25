@@ -24,19 +24,21 @@
     padding: 1rem 0;
 }
 
-.logo h1 {
-    font-size: 2rem;
-    color: white;
-    margin: 0;
-    font-weight: bold;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo .slogan {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-    font-style: italic;
-    font-weight: normal;
+.logo-image {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
 }
 
 .nav {

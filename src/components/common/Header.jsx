@@ -40,8 +40,7 @@ const Header = () => {
             <div className="container">
                 <div className="nav-wrapper">
                     <Link to="/" className="logo">
-                        <h1>Sweepo</h1>
-                        <p className="slogan">We sweep, you relax</p>
+                        <img src="/images/general/logo.JPG" alt="Sweepo - We sweep, you relax" className="logo-image" />
                     </Link>
 
                     <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

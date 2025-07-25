@@ -27,8 +27,11 @@ export const useForm = (initialValues, onSubmit) => {
     };
 
     const validatePhone = (phone) => {
-        const re = /^[\+]?[1-9][\d]{0,15}$/;
-        return re.test(phone.replace(/\s/g, ''));
+        // Remove spaces, dashes, parentheses, and plus signs for validation
+        const cleanPhone = phone.replace(/[\s\-\(\)\+]/g, '');
+        // Check if remaining characters are all digits
+        const re = /^\d+$/;
+        return re.test(cleanPhone) && cleanPhone.length > 0;
     };
 
     const validate = () => {

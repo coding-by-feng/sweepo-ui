@@ -24,7 +24,7 @@ const QuoteModal = () => {
     // This prevents the useForm hook from being recreated unnecessarily
     const handleSubmit = useMemo(() => async (formData) => {
         try {
-            const response = await fetch('/api/quote', {
+            const response = await fetch('http://localhost:5000/api/quote', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

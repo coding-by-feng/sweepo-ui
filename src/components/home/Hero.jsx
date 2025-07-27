@@ -19,9 +19,9 @@ const Hero = () => {
                                     <i className="fas fa-calculator"></i>
                                     <span className="btn-text">Get Free Quote</span>
                                 </button>
-                                <a href="tel:+64-21-123-4567" className="btn btn-secondary btn-large">
+                                <a href="tel:+64225269873" className="btn btn-secondary btn-large">
                                     <i className="fas fa-phone"></i>
-                                    <span className="btn-text">+64 21 123 4567</span>
+                                    <span className="btn-text">022 526 9873</span>
                                 </a>
                             </div>
 

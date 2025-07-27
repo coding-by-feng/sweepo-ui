@@ -42,7 +42,7 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Contact Info</h4>
                         <div className="contact-info">
-                            <p><i className="fas fa-phone"></i> 02904310340</p>
+                            <p><i className="fas fa-phone"></i> <a href="tel:+64225269873" style={{ color: 'inherit', textDecoration: 'none' }}>022 526 9873</a></p>
                             <p><i className="fas fa-envelope"></i> roy@sweepo.co.nz</p>
                             <p><i className="fas fa-map-marker-alt"></i> Auckland, New Zealand</p>
                             <p><i className="fas fa-clock"></i> 24/7 Service Available</p>

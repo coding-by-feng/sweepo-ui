@@ -271,8 +271,8 @@ const LawnGarden = () => {
                             <button className="btn btn-primary btn-large" onClick={openQuoteModal}>
                                 Get Free Estimate Now
                             </button>
-                            <a href="tel:+64-21-123-4567" className="btn btn-outline btn-large">
-                                <i className="fas fa-phone"></i> Call +64 21 123 4567
+                            <a href="tel:+64225269873" className="btn btn-outline btn-large">
+                                <i className="fas fa-phone"></i> Call 022 526 9873
                             </a>
                         </div>
                     </div>

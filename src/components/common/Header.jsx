@@ -90,7 +90,7 @@ const Header = () => {
                     </nav>
 
                     <div className="header-actions">
-                        <a href="tel:+64-21-123-4567" className="btn btn-call">
+                        <a href="tel:+64225269873" className="btn btn-call">
                             <i className="fas fa-phone"></i>
                             <span className="btn-text">Call Now</span>
                         </a>
